@@ -17,6 +17,10 @@ module.exports = {
         nun: "url('./images/nun.svg')",
         "ancient-picture": "url('./images/ancientPicture.svg')",
       },
+      colors: {
+        brown: "#A54E2B",
+        orange: "#DC9853",
+      },
     },
   },
   plugins: [],

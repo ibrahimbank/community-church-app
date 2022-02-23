@@ -2,7 +2,7 @@ import React from "react";
 
 function Benefit() {
   return (
-    <div className="flex flex-col mt-32 items-center justify-items-center">
+    <section className="flex flex-col mt-32 items-center justify-items-center bg-[#F5F2F0] pt-32">
       <h6 className="font-normal leading-4 mb-4">WATCH AND LISTEN</h6>
       <h2 className="w-96 text-center mb-16 ">
         THE BENEFITS OF JOINING OUR CHURCH
@@ -21,7 +21,7 @@ function Benefit() {
           <h4>WATCH AND LISTEN TO OUR SERMON</h4>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

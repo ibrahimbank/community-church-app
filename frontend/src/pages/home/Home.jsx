@@ -3,6 +3,7 @@ import Header from "./Header";
 import WhatWeDo from "./WhatWeDo";
 import CelebrateWithUs from "./CelebrateWithUs";
 import Benefit from "./Benefit";
+import JoinUs from "../../common/JoinUs";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <WhatWeDo />
       <CelebrateWithUs />
       <Benefit />
+      <JoinUs />
     </>
   );
 }
