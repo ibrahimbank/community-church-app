@@ -12,6 +12,12 @@ const userSchema = mongoose.Schema(
       required: [true, "Please add an email"],
       unique: true,
     },
+
+    isAdmin: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
   {
     timestamps: true,
