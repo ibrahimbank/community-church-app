@@ -1,4 +1,4 @@
-import image from "../images/wing.svg";
+import image from "../images/manAndWomanWithWings.svg";
 import { FaArrowRight, FaClock, FaMapPin } from "react-icons/fa";
 
 function JoinUs() {
@@ -42,13 +42,13 @@ function JoinUs() {
             <p className="text-base font-normal">JULY</p>
           </span>
         </div>
-        <div className="event-img h-full">
-          <img src={image} alt="members" className="h-full" />
+        <div className="event-img h-full  ">
+          <img src={image} alt="members" className="" />
         </div>
       </div>
-      <div className="flex flex-col justify-items-center  items-end check w-full p-8">
-        <button className="flex space-x-2">
-          VIEW ALL SERMONS <FaArrowRight className="ml-2" />
+      <div className="flex flex-col justify-items-center  items-end  w-full p-8">
+        <button className="flex text-sm space-x-2">
+          VIEW ALL SERMONS <FaArrowRight className="ml-2  text-sm w-4" />
         </button>
       </div>
     </section>

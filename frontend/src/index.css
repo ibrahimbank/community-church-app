@@ -99,7 +99,29 @@ h2 {
   width: 1280px;
 }
 
-/* .check,
-.h-full {
-  border: 1px solid red;
+.check {
+  width: 435px;
+}
+
+.events-wrapper {
+  width: 302px;
+}
+
+footer p,
+footer span,
+footer li {
+  opacity: 0.75;
+  font-family: 12px;
+}
+
+footer h6 {
+  font-size: 16px;
+}
+
+footer li {
+  margin-bottom: 24px;
+}
+
+/* .sub-input {
+  border: 1px solid rgba(255, 255, 255, 0.15);
 } */
