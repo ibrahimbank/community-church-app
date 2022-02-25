@@ -2,14 +2,13 @@ const mongoose = require("mongoose");
 
 const upcomingEventsSchema = mongoose.Schema({
   date: {
-    type: String,
+    type: Number,
     required: [true, "Please add a date"],
   },
 
   month: {
     type: String,
     required: [true, "Please add an email"],
-    unique: true,
   },
 
   heading: {

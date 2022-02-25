@@ -22,6 +22,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", require("./route/userRoute")); //importing the user route and setting our desire endpoint to api/users
 
+app.use("/api/upcomingEvents", require("./route/upcomingEventsRoute"));
+
 app.use(errorHandler); //using the error handler we created
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
