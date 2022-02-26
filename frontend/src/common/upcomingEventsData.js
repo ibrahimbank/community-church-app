@@ -1,0 +1,47 @@
+const upcomingEvents = [
+  {
+    id: 1,
+    date: 20,
+    month: "JULY",
+    heading: "100 random acts of kindness",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    time: "Friday 12:20 ISO",
+    time2: "Saturday 11:20 ISD",
+    location: "No 233 Main St. New York, United States",
+  },
+  {
+    id: 2,
+    date: 25,
+    month: "JULY",
+    heading: "Faith is a process, not a destination",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    time: "Friday 12:20 ISO",
+    time2: "Saturday 11:20 ISD",
+    location: "No 233 Main St. New York,",
+    location2: "United States",
+  },
+  {
+    id: 3,
+    date: 2,
+    month: "AUGUST",
+    heading: "there is nothing impossible",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    time: "Friday 12:20 ISO",
+    time2: "Saturday 11:20 ISD",
+    location: "No 233 Main St. New York,",
+    location2: "United States",
+  },
+  {
+    id: 4,
+    date: 23,
+    month: "SEPTEMBER",
+    heading: "WATCH AND LISTEN TO OUR SERMONS",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    time: "Friday 12:20 ISO",
+    time2: "Saturday 11:20 ISD",
+    location: "No 233 Main St. New York,",
+    location2: "United States",
+  },
+];
+
+export default upcomingEvents;

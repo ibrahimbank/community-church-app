@@ -122,6 +122,27 @@ footer li {
   margin-bottom: 24px;
 }
 
-/* .sub-input {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.serve {
+  background: url("./images/agedGrandCathedral.svg"),
+    linear-gradient(#cd5423, #ffd0a0) center no-repeat;
+  background-size: cover;
+  mix-blend-mode: soft-light;
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  height: 36rem;
+}
+
+.quote {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.serve-wrapper {
+  backdrop-filter: blur(1.2px);
+}
+
+.serve-card {
+  width: 368px;
+}
+
+/* .server-card-wrapper {
+  height: 480px;
 } */

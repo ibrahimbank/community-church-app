@@ -6,6 +6,7 @@ import JoinUs from "../../common/JoinUs";
 import Events from "../../common/Events";
 import Footer from "../../common/Footer";
 import Navbar from "../../common/Navbar";
+import Serve from "./Serve";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <CelebrateWithUs />
       <Benefit />
       <JoinUs />
+      <Serve />
       <Events />
       <Footer />
     </>
