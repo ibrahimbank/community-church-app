@@ -17,7 +17,10 @@ function CelebrateWithUs() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <button className="flex items-center justify-items-center text-sm">
+        <button
+          className="flex items-center justify-items-center text-sm"
+          onClick={() => navigate("/about-us")}
+        >
           Read More <FaArrowRight className="ml-2 text-[#33343E]" />
         </button>
       </div>

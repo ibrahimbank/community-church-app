@@ -111,11 +111,11 @@ footer p,
 footer span,
 footer li {
   opacity: 0.75;
-  font-family: 12px;
+  font-size: 10px;
 }
 
 footer h6 {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 footer li {
@@ -143,6 +143,36 @@ footer li {
   width: 368px;
 }
 
-/* .server-card-wrapper {
-  height: 480px;
-} */
+.about-mission {
+  width: 372px;
+  height: 283px;
+}
+
+.normal,
+.reverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 238px;
+  padding-right: 238px;
+  margin-bottom: 6rem;
+}
+
+.reverse .img-wrapper {
+  order: 1;
+  margin-right: 1.5rem;
+}
+
+.normal .img-wrapper {
+  order: 1;
+  margin-left: 1.5rem;
+}
+
+.reverse .cool {
+  order: 2;
+}
+
+.normal .benfit-para,
+.reverse .benfit-para {
+  width: 450px;
+}

@@ -1,8 +1,10 @@
 import ImageOne from "../images/beardedManPraying.svg";
 import ImageTwo from "../images/manAndWomanReading.svg";
 import ImageThree from "../images/oldWomanInGreen.png";
+import { useNavigate } from "react-router-dom";
 
 function LoveAndCompasionSection() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center justify-items-center mt-16 pt-16">
       <h2 className=" font-bold mb-12 leading-10 text-[#161722]">
@@ -15,7 +17,10 @@ function LoveAndCompasionSection() {
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
-      <button className="btn-love rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-base font-normal">
+      <button
+        className="btn-love rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-base font-normal "
+        onClick={() => navigate("/about-us")}
+      >
         READ MORE
       </button>
       <div className="flex items-center justify-items-center space-x-4">

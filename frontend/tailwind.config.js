@@ -16,6 +16,7 @@ module.exports = {
         "man-holding-bible": "url('./images/manHoldingBible.svg')",
         nun: "url('./images/nun.svg')",
         "ancient-picture": "url('./images/ancientPicture.svg')",
+        "about-header": "url('./images/aboutHeader.png')",
       },
       colors: {
         brown: "#A54E2B",

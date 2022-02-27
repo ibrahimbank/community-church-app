@@ -1,7 +1,9 @@
 import Logo from "../images/footerLogo.png";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="footer flex bg-[#161722] py-16 px-24 justify-between text-[#ffff]">
       <div className="mr-64 ">
@@ -13,18 +15,14 @@ function Footer() {
       </div>
       <ul className="">
         <h6 className="mb-5">Quicklinks</h6>
-        <a href="/" className="">
-          <li className="">ABOUT US</li>
-        </a>
-        <a href="/" className="">
-          <li className="/">SERMON</li>
-        </a>
-        <a href="/" className="">
-          <li className="">EVENTS</li>
-        </a>
-        <a href="/" className="">
-          <li className="/">BLOG</li>
-        </a>
+
+        <Link to="/about-us">ABOUT US</Link>
+
+        <Link to="/sermon">SERMON</Link>
+
+        <Link to="/sermon-events">EVENTS</Link>
+
+        <Link to="/blog">BLOG</Link>
       </ul>
       <div className="">
         <h6 className="mb-6">Connect</h6>
@@ -35,7 +33,7 @@ function Footer() {
         </div>
       </div>
       <div className="">
-        <h5 className="text-xl w-96 mb-8">
+        <h5 className=" text-base w-96 mb-8">
           SUBSCRIBE TO GET LATEST UPDATES AND NEWS
         </h5>
         <div className="flex">
@@ -44,7 +42,10 @@ function Footer() {
             className="relative sub-input w-96 h-16 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
             placeholder="Yourmail@gmail.com"
           />
-          <button className="bg-[#FFD2A4] w-48 h-16 rounded-lg text-[#1C1D28] text-base absolute right-24">
+          <button
+            className="bg-[#FFD2A4] w-40 h-16 rounded-lg text-[#1C1D28] text-sm absolute right-24"
+            onClick={() => navigate("/sermon")}
+          >
             SUBSCRIBE
           </button>
         </div>
