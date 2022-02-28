@@ -34,7 +34,7 @@ function JoinUs() {
               </div>
             </div>
           </div>
-          <button className="btn-join w-52 mt-6 bg-[#161722] rounded-xl text-[#FFD2A4]">
+          <button className="btn text-sm w-40 mt-6 bg-[#161722] rounded-xl text-[#FFD2A4]">
             REGISTER
           </button>
           <span className="flex flex-col items-center justify-items-center absolute top-0 right-0 p-4">

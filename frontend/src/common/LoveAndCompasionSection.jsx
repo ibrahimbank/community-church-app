@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function LoveAndCompasionSection() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center justify-items-center mt-16 pt-16">
+    <section className="flex flex-col items-center justify-items-center mt-16 pt-16">
       <h2 className=" font-bold mb-12 leading-10 text-[#161722]">
         LOVE AND COMPASSION
       </h2>
@@ -18,7 +18,7 @@ function LoveAndCompasionSection() {
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
       <button
-        className="btn-love rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-base font-normal "
+        className="btn w-40 rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-sm font-normal "
         onClick={() => navigate("/about-us")}
       >
         READ MORE
@@ -40,7 +40,7 @@ function LoveAndCompasionSection() {
           className="love-img w-72 h-96 -translate-y-20"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

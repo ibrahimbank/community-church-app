@@ -2,7 +2,10 @@ import React from "react";
 
 function MissionAndVission() {
   return (
-    <div className="flex  space-x-3 items-center justify-center w-full mt-32 mb-24">
+    <section
+      className="flex  space-x-3 items-center justify-center w-full mt-32 mb-24"
+      id="mission"
+    >
       <div className="about-mission flex flex-col">
         <h6 className="text-base mb-4">OUR MISSION AND VISSION</h6>
         <h4 className="mb-4 font-bold text-lg w-80">
@@ -30,7 +33,7 @@ function MissionAndVission() {
           reprehenderit in voluptate velit esse cillum.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

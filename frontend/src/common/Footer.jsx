@@ -16,13 +16,21 @@ function Footer() {
       <ul className="">
         <h6 className="mb-5">Quicklinks</h6>
 
-        <Link to="/about-us">ABOUT US</Link>
+        <li>
+          <Link to="/about-us">ABOUT US</Link>
+        </li>
 
-        <Link to="/sermon">SERMON</Link>
+        <li>
+          <Link to="/sermon">SERMON</Link>
+        </li>
 
-        <Link to="/sermon-events">EVENTS</Link>
+        <li>
+          <Link to="/sermon-events">EVENTS</Link>
+        </li>
 
-        <Link to="/blog">BLOG</Link>
+        <li>
+          <Link to="/blog">BLOG</Link>
+        </li>
       </ul>
       <div className="">
         <h6 className="mb-6">Connect</h6>
@@ -38,12 +46,13 @@ function Footer() {
         </h5>
         <div className="flex">
           <input
-            type="text"
-            className="relative sub-input w-96 h-16 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
+            type="email"
+            name="email"
+            className="btn relative sub-input w-96 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
             placeholder="Yourmail@gmail.com"
           />
           <button
-            className="bg-[#FFD2A4] w-40 h-16 rounded-lg text-[#1C1D28] text-sm absolute right-24"
+            className="btn bg-[#FFD2A4] w-40 rounded-lg text-[#1C1D28] text-sm absolute right-24"
             onClick={() => navigate("/sermon")}
           >
             SUBSCRIBE

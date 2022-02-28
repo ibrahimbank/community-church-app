@@ -1,5 +1,3 @@
-import QuoteIcon from "../../images/QuoteIcon.png";
-import agedGrandCathedral from "../../images/agedGrandCathedral.svg";
 import { FaQuoteRight } from "react-icons/fa";
 
 function Serve() {
@@ -15,7 +13,7 @@ function Serve() {
               <p className="opacity-75">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
               </p>
-              <button className="w-40 h-20 bg-[#FFD2A4]  text-black rounded-md text-base items-center mt-4">
+              <button className="btn w-32 bg-[#FFD2A4]  text-black rounded-md text-sm items-center mt-4">
                 VISIT
               </button>
             </div>

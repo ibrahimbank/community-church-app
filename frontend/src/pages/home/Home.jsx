@@ -7,18 +7,24 @@ import Events from "../../common/Events";
 import Footer from "../../common/Footer";
 import Navbar from "../../common/Navbar";
 import Serve from "./Serve";
+import { Reveal } from "react-reveal";
 
 function Home() {
   return (
     <>
       <Navbar />
       <Header />
-      <WhatWeDo />
-      <CelebrateWithUs />
-      <Benefit />
-      <JoinUs />
-      <Serve />
-      <Events />
+      <Reveal>
+        <WhatWeDo />
+        <CelebrateWithUs />
+        <Benefit />
+        <JoinUs />
+        <Serve />
+        <Events
+          subHeading="READ OUR BLOG heading"
+          heading="SHARE, INSPIRE, INNOVATE"
+        />
+      </Reveal>
       <Footer />
     </>
   );

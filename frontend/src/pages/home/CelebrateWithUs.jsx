@@ -18,8 +18,8 @@ function CelebrateWithUs() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <button
-          className="flex items-center justify-items-center text-sm"
-          onClick={() => navigate("/about-us")}
+          className="btn flex items-center justify-items-center text-sm"
+          onClick={() => navigate("/#try")}
         >
           Read More <FaArrowRight className="ml-2 text-[#33343E]" />
         </button>

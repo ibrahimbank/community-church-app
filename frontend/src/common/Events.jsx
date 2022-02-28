@@ -3,19 +3,22 @@ import { FaClock, FaMapPin } from "react-icons/fa";
 // import axios from "axios";
 import upcomingEvents from "./upcomingEventsData";
 
-function Events() {
+function Events({ subHeading, heading }) {
   // const [events, setEvents] = useState();
   // const url = "http://localhost:6000/api/upcomingEvents";
 
   return (
     <section className="flex flex-col items-center justify-center mb-32">
-      <h6 className="text-base font-normal">READ OUR BLOG</h6>
-      <h2 className="mb-16">SHARE, INSPIRE, INNOVATE</h2>
+      <h6 className="text-base font-normal">{subHeading}</h6>
+      <h2 className="mb-16">{heading}</h2>
       <div className="flex space-x-3 justify-items-center items-center">
         {upcomingEvents.map((event) => (
-          <div className="events-wrapper relative flex flex-col bg-[#FFF5EB] items-start justify-items-center px-10 py-20">
+          <div
+            key={event.id}
+            className="events-wrapper relative flex flex-col bg-[#FFF5EB] items-start justify-items-center px-10 py-20"
+          >
             <h6 className="join-text text-xs font-bold">UPCOMING EVENT</h6>
-            <h5 className="text-xl w-full mt-4 mb-8 font-bold">
+            <h5 className="text-lg w-full mt-4 mb-8 font-bold">
               {event.heading.toUpperCase()}
             </h5>
             <p className="w-64 opacity-75 font-normal ">{event.description}</p>

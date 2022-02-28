@@ -44,15 +44,12 @@ p {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-.btn-love {
-  padding: 24px, 64px, 24px, 64px;
-  /* border: 1px solid green; */
-  width: 205px;
-  height: 60px;
+.btn {
+  height: 3rem;
 }
 
 .love-img {
@@ -88,10 +85,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
-}
-
-.btn-join {
-  height: 64px;
 }
 
 .event {
