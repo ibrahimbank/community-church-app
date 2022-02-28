@@ -7,7 +7,7 @@ module.exports = {
         16: "2rem",
         15: "3.75rem",
         128: "32rem",
-        144: "36rem",
+        144: "39rem",
       },
 
       backgroundImage: {
@@ -17,6 +17,7 @@ module.exports = {
         nun: "url('./images/nun.svg')",
         "ancient-picture": "url('./images/ancientPicture.svg')",
         "about-header": "url('./images/aboutHeader.png')",
+        "contact-header": "url('./images/contactImage.png')",
       },
       colors: {
         brown: "#A54E2B",
