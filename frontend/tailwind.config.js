@@ -8,6 +8,8 @@ module.exports = {
         15: "3.75rem",
         128: "32rem",
         144: "39rem",
+        150: "48rem",
+        201: "91rem",
       },
 
       backgroundImage: {

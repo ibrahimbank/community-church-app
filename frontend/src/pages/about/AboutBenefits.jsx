@@ -4,7 +4,7 @@ function AboutBenefits() {
   return (
     <section className="flex flex-col items-center justify-center mb-32">
       <h6 className="text-base">BENEFITS</h6>
-      <h2 className="w-96 text-center mb-16">
+      <h2 className="w-96 text-center mb-16 font-bold text-3xl">
         THE BENEFITS OF JOINING OUR CHURCH
       </h2>
       {Benefit.map((data) => (

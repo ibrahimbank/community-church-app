@@ -6,10 +6,10 @@ function Navbar() {
   const navigate = useNavigate();
   return (
     <nav className=" fixed top-0 left-0 right-0 z-10 flex justify-between items-center bg-[#0D0D0D] px-15  gap-8 h-20 divide-x-2">
-      <div className="flex-none">
+      <Link to="/" className="flex-none">
         <img src={Logo} alt="logo" />
-      </div>
-      <ul className="flex-auto text-[#fff] flex justify-between p-3 text-base h-20 items-center">
+      </Link>
+      <ul className="flex-auto text-[#fff] flex justify-between p-3 text-base h-20 items-center ">
         <div className="flex justify-start w-9/12 p-2 gap-8 text-base not-italic font-normal opacity-90">
           <li>
             <Link to="/">HOME</Link>
