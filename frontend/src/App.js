@@ -6,20 +6,26 @@ import Blog from "./pages/blog/Blog";
 import ContactUs from "./pages/contact/ContactUs";
 import SermonEvent from "./pages/sermon/SermonEvent";
 import BlogPost from "./pages/blog/BlogPost";
+import Navbar from "./common/Navbar";
+import Footer from "./common/Footer";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/sermon" element={<Sermon />} />
-        <Route path="/sermon-events" element={<SermonEvent />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-post" element={<BlogPost />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/sermon" element={<Sermon />} />
+          <Route path="/sermon-events" element={<SermonEvent />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog-post" element={<BlogPost />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

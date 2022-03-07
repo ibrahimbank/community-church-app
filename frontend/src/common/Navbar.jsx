@@ -1,9 +1,8 @@
 import React from "react";
 import Logo from "../images/Logo.svg";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const navigate = useNavigate();
   return (
     <nav className=" fixed top-0 left-0 right-0 z-10 flex justify-between items-center bg-[#0D0D0D] px-15  gap-8 h-20 divide-x-2">
       <Link to="/" className="flex-none">
@@ -28,12 +27,12 @@ function Navbar() {
           </li>
         </div>
 
-        <button
-          className="btn bg-[#ffd2a4] w-40 h-14 rounded-xl leading-4 text-[#1C1D28] "
-          onClick={() => navigate("/contact-us")}
+        <Link
+          to="contact-us"
+          className="btn bg-[#ffd2a4] w-40 h-14 rounded-xl leading-4 text-[#1C1D28] p-4 text-center items-center justify-center "
         >
           CONTACT US
-        </button>
+        </Link>
       </ul>
     </nav>
   );

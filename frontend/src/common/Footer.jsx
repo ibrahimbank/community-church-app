@@ -1,9 +1,8 @@
 import Logo from "../images/footerLogo.png";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer() {
-  const navigate = useNavigate();
   return (
     <footer className="footer flex bg-[#161722] py-16 px-24 justify-between text-[#ffff]">
       <div className="mr-64 ">
@@ -51,12 +50,12 @@ function Footer() {
             className="btn relative sub-input w-96 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
             placeholder="Yourmail@gmail.com"
           />
-          <button
-            className="btn bg-[#FFD2A4] w-40 rounded-lg text-[#1C1D28] text-sm absolute right-24"
-            onClick={() => navigate("/sermon")}
+          <Link
+            to="contact-us"
+            className="btn bg-[#FFD2A4] w-40 rounded-lg text-[#1C1D28] text-sm absolute text-center justify-center right-24 p-4"
           >
             SUBSCRIBE
-          </button>
+          </Link>
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ function Events({ subHeading, heading }) {
   // const url = "http://localhost:6000/api/upcomingEvents";
 
   return (
-    <section className="flex flex-col items-center justify-center mb-32">
+    <section className="flex flex-col items-center justify-center">
       <h6 className="text-base font-normal">{subHeading}</h6>
       <h2 className="mb-16">{heading}</h2>
       <div className="flex space-x-3 justify-items-center items-center">

@@ -1,17 +1,14 @@
 import React from "react";
-import Footer from "../../common/Footer";
-import Navbar from "../../common/Navbar";
 import image from "../../images/sermonImg.png";
 import blogData from "./blogData";
 
 function Blog() {
   return (
-    <div className="bg-[#E5E5E5]">
-      <Navbar />
+    <div className="bg-[#E5E5E5] max-h-full pb-32">
       <section className="flex flex-col items-center justify-center mb-16 px-28 mt-20 pt-32">
         <h6 className="opacity-75 text-base">OUR BLOG</h6>
         <h2 className="">MOST RECENT POST</h2>
-        <div className="flex items-center justify-center px-14 space-x-8 mt-16 border bg-[#ffff] px-6 py-6">
+        <div className="flex items-center justify-center px-14 space-x-8 mt-16 border bg-[#ffff]  py-6">
           <img src={image} alt="members" className="w-1/2 h-80" />
           <div className="flex flex-col pt-4  w-1/2">
             <div className="flex space-x-24">
@@ -39,7 +36,7 @@ function Blog() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center mt-32 mb-32 px-28 ">
+      <section className="flex flex-col items-center mt-32 px-28 ">
         <h2 className="mb-16">ALL BLOG POSTS</h2>
         <div className="grid grid-cols-4 gap-x-7 gap-y-10 ">
           {blogData.map((data) => (
@@ -65,8 +62,6 @@ function Blog() {
           ))}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
