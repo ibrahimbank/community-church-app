@@ -2,12 +2,31 @@ const asyncHandler = require("express-async-handler"); //to make it easy for han
 
 const upcomingEvents = require("../models/upcomingEventsModel");
 
-const list = asyncHandler(async (req, res) => {
-  const users = await upcomingEvents.find();
+//@desc Get event
+//@Route /api/events/:id
+// @access Public
+const getEvents = asyncHandler(async (req, res) => {
+  const events = await upcomingEvents.find({});
 
-  res.status(200).json(users);
+  res.status(200).json(events);
+});
+
+//@desc Get event
+//@Route /api/events/:id
+// @access Public
+
+const getEvent = asyncHandler(async (req, res) => {
+  const post = await Blog.findById(req.params.id);
+
+  if (!post) {
+    res.status(404);
+    throw new Error("Blog Post not found");
+  }
+
+  res.status(200).json(post);
 });
 
 module.exports = {
-  list,
+  getEvents,
+  getEvent,
 };

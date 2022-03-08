@@ -8,6 +8,8 @@ import SermonEvent from "./pages/sermon/SermonEvent";
 import BlogPost from "./pages/blog/BlogPost";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      <ToastContainer />
     </>
   );
 }

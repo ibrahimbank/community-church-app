@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
 }); //setting get request, it takes in your the url you want to set it to and a function which have the request and response as an argument. this is the root route ('/')
 
 app.use("/api/users", require("./route/userRoute")); //importing the user route and setting our desire endpoint to api/users
+app.use("/api/blog-posts", require("./route/blogPostRoute")); //importing the user route and setting our desire endpoint to api/users
 
 app.use("/api/upcomingEvents", require("./route/upcomingEventsRoute"));
 
