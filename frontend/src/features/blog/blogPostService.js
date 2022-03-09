@@ -17,7 +17,9 @@ const blogPosts = async () => {
 //get a blog
 
 const singlePost = async (blogId) => {
-  const response = await axios.get(API_URL + blogId);
+  const response = await axios.get(
+    "http://localhost:6000/api/blog-posts/" + blogId
+  );
 
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));

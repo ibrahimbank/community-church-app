@@ -3,7 +3,7 @@ import blogPostService from "./blogPostService";
 
 const initialState = {
   blog: [],
-  singleBlog: {},
+  oneBlog: {},
   isError: false,
   isLoading: false,
   isSuccess: false,
@@ -83,7 +83,7 @@ export const blogSlice = createSlice({
         state.isError = false;
         state.isLoading = false;
         state.isSuccess = true;
-        state.blog = action.payload;
+        state.oneBlog = action.payload;
       })
       .addCase(singlePost.rejected, (state, action) => {
         state.isError = true;

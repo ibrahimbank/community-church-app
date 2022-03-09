@@ -9,7 +9,7 @@ import Serve from "./Serve";
 
 function Home() {
   return (
-    <>
+    <div className="pb-32">
       <Header />
       {/* <Reveal> */}
       <WhatWeDo />
@@ -22,7 +22,7 @@ function Home() {
         heading="SHARE, INSPIRE, INNOVATE"
       />
       {/* </Reveal> */}
-    </>
+    </div>
   );
 }
 
