@@ -5,11 +5,11 @@ import SermonHeader from "./SermonHeader";
 
 function Sermon() {
   return (
-    <>
+    <div className="pb-32">
       <SermonHeader />
       <JoinUs />
       <Events heading="VIEW ALL SERMON" />
-    </>
+    </div>
   );
 }
 

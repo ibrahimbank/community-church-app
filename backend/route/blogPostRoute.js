@@ -17,6 +17,6 @@ router.use(function (req, res, next) {
 });
 
 router.get("/", getBlogPosts);
-router.get("/:id", getBlogPost);
+router.get("/:blogId", getBlogPost);
 
 module.exports = router;

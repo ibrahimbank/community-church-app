@@ -16,14 +16,14 @@ const getEvents = asyncHandler(async (req, res) => {
 // @access Public
 
 const getEvent = asyncHandler(async (req, res) => {
-  const post = await Blog.findById(req.params.id);
+  const event = await upcomingEvents.findById(req.params.id);
 
-  if (!post) {
+  if (!event) {
     res.status(404);
     throw new Error("Blog Post not found");
   }
 
-  res.status(200).json(post);
+  res.status(200).json(event);
 });
 
 module.exports = {

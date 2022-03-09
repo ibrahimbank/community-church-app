@@ -26,6 +26,18 @@ const blogSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add an date"],
     },
+
+    list1: {
+      type: String,
+    },
+
+    list2: {
+      type: String,
+    },
+
+    list3: {
+      type: String,
+    },
   },
   {
     timestamps: true,

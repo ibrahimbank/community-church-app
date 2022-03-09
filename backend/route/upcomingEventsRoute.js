@@ -15,8 +15,8 @@ router.use(function (req, res, next) {
   next();
 });
 
-router.get("/", getEvents); //we are setting a post request for the Registeruser route here, if a post request is sent this will be the result
+router.get("/", getEvents); //we are setting a post request for the event route here, if a post request is sent this will be the result
 
-router.get("/:id", getEvent); //we are setting a post request for the Registeruser route here, if a post request is sent this will be the result
+router.get("/:id", getEvent); //we are setting a post request for a single events route here, if a post request is sent this will be the result
 
 module.exports = router;

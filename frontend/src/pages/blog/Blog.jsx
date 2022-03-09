@@ -1,8 +1,37 @@
-import React from "react";
+import { useEffect } from "react";
 import image from "../../images/sermonImg.png";
 import blogData from "./blogData";
+import {
+  getBlogPost,
+  reset,
+  singlePost,
+} from "../../features/blog/blogPostSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function Blog() {
+  const dispatch = useDispatch();
+
+  const { blog, singleBlog, isLoading, isSuccess } = useSelector(
+    (state) => state.blog
+  );
+
+  const navigate = useNavigate();
+  const { blogId } = useParams();
+  useEffect(() => {
+    if (isSuccess) {
+      dispatch(reset);
+    }
+  }, [isSuccess, dispatch]);
+
+  useEffect(() => {
+    dispatch(getBlogPost(blogId));
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <h1>LOADING....</h1>;
+  }
+
   return (
     <div className="bg-[#E5E5E5] max-h-full pb-32">
       <section className="flex flex-col items-center justify-center mb-16 px-28 mt-20 pt-32">
@@ -39,8 +68,12 @@ function Blog() {
       <section className="flex flex-col items-center mt-32 px-28 ">
         <h2 className="mb-16">ALL BLOG POSTS</h2>
         <div className="grid grid-cols-4 gap-x-7 gap-y-10 ">
-          {blogData.map((data) => (
-            <div key={data.id} className="blog-card flex flex-col ">
+          {blog.map((data) => (
+            <div
+              key={data._id}
+              className="blog-card flex flex-col cursor-pointer "
+              onClick={() => <Link to={`/blog/${data._id}`} />}
+            >
               <div className="px-8 py-12 bg-[#ffff]">
                 <h6 className="blog-subheading text-sm mb-4">
                   {data.subHeading}
@@ -48,14 +81,16 @@ function Blog() {
                 <h5 className=" font-bold text-lg mb-4">
                   {data.heading.toUpperCase()}
                 </h5>
-                <p className="opacity-75 mb-12">{data.description}</p>
+                <p className="opacity-75 mb-12">
+                  {data.description.substring(0, 123)}
+                </p>
 
                 <div className="">
                   <p className="mb-1">{data.autor}</p>
                   <p className="">{data.date}</p>
                 </div>
               </div>
-              {data.id === 1 && (
+              {data === [0] && (
                 <div className="h-4 w-full bg-[#FFD2A4] -mt-4"></div>
               )}
             </div>
