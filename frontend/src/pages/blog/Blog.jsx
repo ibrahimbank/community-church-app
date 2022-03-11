@@ -3,7 +3,7 @@ import image from "../../images/sermonImg.png";
 // import blogData from "./blogData";
 import { getBlogPost, reset } from "../../features/blog/blogPostSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 function Blog() {
@@ -11,7 +11,7 @@ function Blog() {
 
   const { blog, isLoading, isSuccess } = useSelector((state) => state.blog);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { blogId } = useParams();
   useEffect(() => {
     if (isSuccess) {
@@ -21,7 +21,7 @@ function Blog() {
 
   useEffect(() => {
     dispatch(getBlogPost(blogId));
-  }, [dispatch]);
+  }, [dispatch, blogId]);
 
   if (isLoading) {
     return <h1>LOADING....</h1>;

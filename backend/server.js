@@ -31,6 +31,8 @@ app.get("/", (req, res) => {
 app.use("/api/users", require("./route/userRoute")); //importing the user route and setting our desire endpoint to api/users
 app.use("/api/blog-posts", require("./route/blogPostRoute")); //importing the blog-post route and setting our desire endpoint to api/users
 
+app.use("/api/contact", require("./route/contactRoute"));
+
 // app.use("/api/upcomingEvents", require("./route/upcomingEventsRoute"));
 
 app.use(errorHandler); //using the error handler we created

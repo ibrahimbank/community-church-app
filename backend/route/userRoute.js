@@ -3,6 +3,8 @@ const router = express.Router(); //using express router
 
 const { registerUser } = require("../controllers/userController"); // bringing the function in from the controller
 
+const { contactRoute } = require("./contactRoute");
+
 router.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(

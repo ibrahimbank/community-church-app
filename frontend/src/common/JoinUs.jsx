@@ -1,5 +1,6 @@
 import image from "../images/manAndWomanWithWings.svg";
 import { FaArrowRight, FaClock, FaMapPin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function JoinUs() {
   return (
@@ -34,9 +35,11 @@ function JoinUs() {
               </div>
             </div>
           </div>
-          <button className="btn text-sm w-40 mt-6 bg-[#161722] rounded-xl text-[#FFD2A4]">
-            REGISTER
-          </button>
+          <Link to="/sermon-events">
+            <button className="btn text-sm w-40 mt-6 bg-[#161722] rounded-xl text-[#FFD2A4]">
+              REGISTER
+            </button>
+          </Link>
           <span className="flex flex-col items-center justify-items-center absolute top-0 right-0 p-4">
             <h5 className="text-2xl font-bold">20</h5>
             <p className="text-base font-normal">JULY</p>
@@ -47,9 +50,11 @@ function JoinUs() {
         </div>
       </div>
       <div className="flex flex-col justify-items-center  items-end  w-full p-8">
-        <button className="flex text-sm space-x-2">
-          VIEW ALL SERMONS <FaArrowRight className="ml-2  text-sm w-4" />
-        </button>
+        <Link to="/sermon">
+          <button className="flex text-sm space-x-2">
+            VIEW ALL SERMONS <FaArrowRight className="ml-2  text-sm w-4" />
+          </button>
+        </Link>
       </div>
     </section>
   );

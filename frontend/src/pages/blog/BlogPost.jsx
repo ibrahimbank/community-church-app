@@ -14,7 +14,7 @@ function BlogPost() {
 
   useEffect(() => {
     dispatch(singlePost(blogId));
-    // dispatch(reset());
+    dispatch(reset());
   }, [dispatch, blogId]);
 
   if (isLoading) {

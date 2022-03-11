@@ -1,7 +1,71 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
+import { createMessage, reset } from "../../features/contact/contactSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    queryRelated: "",
+    contactMessage: "",
+  });
+
+  const { fullName, email, queryRelated, contactMessage } = formData;
+
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.message
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess) {
+      console.log("success");
+      toast.success("Register Successfully, see you at the event");
+    }
+
+    dispatch(reset());
+  }, [dispatch, isError, isSuccess, message]);
+
+  const handleChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (
+      fullName === "" ||
+      email === "" ||
+      queryRelated === "" ||
+      contactMessage === ""
+    ) {
+      toast.error("Please fill all input in the form");
+    } else {
+      const contactData = {
+        fullName,
+        email,
+        queryRelated,
+        contactMessage,
+      };
+
+      dispatch(createMessage(contactData));
+    }
+  };
+
+  if (isLoading) {
+    return <h1>LOADING....</h1>;
+  }
+
   return (
     <section className="flex items-center py-32 px-28 space-x-20">
       <div className="">
@@ -9,31 +73,40 @@ function ContactForm() {
         <form action="" className="flex flex-col w-144 ">
           <input
             type="text"
-            name="FullName"
+            name="fullName"
+            id="fullName"
+            value={fullName}
             placeholder="Your FullName"
             className="form-input mb-3 "
+            onChange={handleChange}
           />
           <input
             type="text"
-            name="Email"
+            name="email"
+            value={email}
             placeholder="Your Email"
             className="form-input mb-3"
+            id="email"
           />
           <input
             type="text"
-            name="Query"
+            name="queryRelated"
+            value={queryRelated}
             placeholder="Query Related"
             className="form-input mb-3"
+            id="queryRelated"
           />
           <textarea
-            name=""
+            name="contactMessage"
+            value={contactMessage}
             placeholder="Message"
             className="form-input-message pt-5"
-            id=""
+            id="contactMessage"
           ></textarea>
           <button
             className="btn bg-[#FFD2A4] mt-3 rounded-lg text-sm "
             type="submit"
+            onClick={onSubmit}
           >
             SEND MESSAGE
           </button>
