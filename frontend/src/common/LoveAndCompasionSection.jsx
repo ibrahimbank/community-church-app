@@ -18,26 +18,26 @@ function LoveAndCompasionSection() {
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
       <button
-        className="btn w-40 rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-sm font-normal "
+        className="btn w-40 rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-sm font-normal lg:mb-8"
         onClick={() => navigate("/about-us")}
       >
         READ MORE
       </button>
-      <div className="flex items-center justify-items-center space-x-4">
+      <div className="flex flex-col md:grid grid-cols-2 md:content-center md:justify-items-center md:self-center items-center space-x-4">
         <img
           src={ImageOne}
           alt="worshipper"
-          className="love-img w-72 h-96 -translate-y-20"
+          className="love-img w-72 h-96 xl:-translate-y-20"
         />
         <img
           src={ImageTwo}
           alt="worshipper"
-          className="love-img  w-96 translate-y-12"
+          className="hidden md:hidden xl:flex love-img md:w-72 lg:w-96 xl:translate-y-12"
         />
         <img
           src={ImageThree}
           alt="worshipper"
-          className="love-img w-72 h-96 -translate-y-20"
+          className="hidden md:flex love-img w-72 h-96 xl:-translate-y-20"
         />
       </div>
     </section>

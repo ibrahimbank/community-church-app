@@ -52,6 +52,16 @@ h2 {
   font-weight: bold;
 }
 
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+
 .btn {
   height: 3rem;
 }

@@ -7,7 +7,7 @@ function Benefit() {
       <h2 className="w-96 text-center mb-16 ">
         THE BENEFITS OF JOINING OUR CHURCH
       </h2>
-      <div className="flex items-center justify-items-center space-x-4">
+      <div className="flex flex-col md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 items-center justify-items-center space-x-4">
         <div className="benefit-card bg-nun">
           <h4>WATCH AND LISTEN TO OUR SERMON</h4>
         </div>

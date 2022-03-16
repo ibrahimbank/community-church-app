@@ -16,7 +16,7 @@ function ContactForm() {
   const { fullName, email, queryRelated, contactMessage } = formData;
 
   const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.message
+    (state) => state.contact
   );
 
   const dispatch = useDispatch();
@@ -87,6 +87,7 @@ function ContactForm() {
             placeholder="Your Email"
             className="form-input mb-3"
             id="email"
+            onChange={handleChange}
           />
           <input
             type="text"
@@ -95,6 +96,7 @@ function ContactForm() {
             placeholder="Query Related"
             className="form-input mb-3"
             id="queryRelated"
+            onChange={handleChange}
           />
           <textarea
             name="contactMessage"
@@ -102,6 +104,7 @@ function ContactForm() {
             placeholder="Message"
             className="form-input-message pt-5"
             id="contactMessage"
+            onChange={handleChange}
           ></textarea>
           <button
             className="btn bg-[#FFD2A4] mt-3 rounded-lg text-sm "

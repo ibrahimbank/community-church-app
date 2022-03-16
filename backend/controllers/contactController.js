@@ -7,14 +7,19 @@ const contact = require("../models/contactModel");
 // @access Private
 
 const addContactMessage = asyncHandler(async (req, res) => {
-  const contactMessage = await contact.create({
-    fullName: req.body.text,
-    email: req.body.text,
-    queryRelated: req.body.text,
-    message: req.body.text,
-  });
+  const { fullName, email, queryRelated, message } = req.body;
 
-  res.status(200).json(contactMessage);
+  if (!fullName || !email || !queryRelated || !message) {
+    res.status(400);
+    throw new Error("Please the required field");
+  }
+  const contactMessage = await contact.create({
+    fullName,
+    email,
+    queryRelated,
+    message,
+  });
+  res.status(201).json(contactMessage);
 });
 
 module.exports = {

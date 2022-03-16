@@ -1,15 +1,42 @@
 import React from "react";
 import Logo from "../images/Logo.svg";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  const onClick = () => {
+    if (showMenu === false) setShowMenu(true);
+    else setShowMenu(false);
+  };
+
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-10 flex justify-between items-center bg-[#0D0D0D] px-15  gap-8 h-20 divide-x-2">
+    <nav className="fixed top-0 left-0 right-0 z-10 flex justify-between items-center bg-[#0D0D0D] px-15  gap-8 h-20 md:divide-x-2">
       <Link to="/" className="flex-none">
         <img src={Logo} alt="logo" />
       </Link>
-      <ul className="flex-auto text-[#fff] flex justify-between p-3 text-base h-20 items-center ">
-        <div className="flex justify-start w-9/12 p-2 gap-8 text-base not-italic font-normal opacity-90">
+
+      <FaBars
+        color="#ffff"
+        size={30}
+        className="menu md:hidden cursor-pointer"
+        onClick={onClick}
+      />
+      <ul
+        className={
+          showMenu === false
+            ? "hidden flex flex-auto text-[#fff]  p-3 text-base h-20 flex-col items-center  justify-center z-10 absolute top-0 left-0 w-full  h-screen md:relative bg-[#000] md:flex md:flex-row  md:justify-between md:items-center  md:bg-inherit md:z-0 md:h-full"
+            : " flex flex-auto text-[#fff]  p-3 text-base h-20 flex-col items-center  justify-center z-10 absolute top-0 left-0 w-full  h-screen md:relative bg-[#000] md:flex md:flex-row  md:justify-between md:items-center  md:bg-inherit md:z-0 md:h-full"
+        }
+      >
+        <div className="flex md:flex flex-col justify-center items-center md:flex-row md:justify-start w-9/12 p-2 gap-8 text-base not-italic font-normal opacity-90">
+          <FaTimes
+            className="md:hidden absolute cursor-pointer top-0 right-0 mr-2 flex"
+            color="#ffff"
+            size={30}
+            onClick={onClick}
+          />
           <li>
             <Link to="/">HOME</Link>
           </li>
