@@ -17,10 +17,7 @@ function Home() {
       <Benefit />
       <JoinUs />
       <Serve />
-      <Events
-        subHeading="READ OUR BLOG heading"
-        heading="SHARE, INSPIRE, INNOVATE"
-      />
+      <Events subHeading="READ OUR BLOG" heading="SHARE, INSPIRE, INNOVATE" />
       {/* </Reveal> */}
     </div>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer flex bg-[#161722] py-16 px-24 justify-between text-[#ffff]">
+    <footer className="footer  grid gap-4 lg:grid-cols-2 xl:flex bg-[#161722] py-16 px-24 justify-between text-[#ffff]">
       <div className="mr-64 ">
         <img src={Logo} alt="logo" className="mb-4 " />
         <p className="mb-8">© Copyright Finsweet 2022</p>
@@ -43,16 +43,16 @@ function Footer() {
         <h5 className=" text-base w-96 mb-8">
           SUBSCRIBE TO GET LATEST UPDATES AND NEWS
         </h5>
-        <div className="flex">
+        <div className="flex relative">
           <input
             type="email"
             name="email"
-            className="btn relative sub-input w-96 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
+            className="btn sub-input w-60 xl:w-96 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
             placeholder="Yourmail@gmail.com"
           />
           <Link
             to="contact-us"
-            className="btn bg-[#FFD2A4] w-40 rounded-lg text-[#1C1D28] text-sm absolute text-center justify-center right-24 p-4"
+            className="btn bg-[#FFD2A4] w-32 xl:w-40 rounded-lg text-[#1C1D28] text-sm absolute text-center justify-center right-24 md:right-[8rem] lg:right-[8.5rem] xl:right-0 p-4"
           >
             SUBSCRIBE
           </Link>

@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 function LoveAndCompasionSection() {
   const navigate = useNavigate();
   return (
-    <section className="flex flex-col items-center justify-items-center mt-16 pt-16">
+    <section className="flex  flex-col items-center justify-items-center mt-16 pt-16">
       <h2 className=" font-bold mb-12 leading-10 text-[#161722]">
         LOVE AND COMPASSION
       </h2>
-      <p className="text-[#161722] w-3/4 text-center opacity-75 leading-6 mb-14">
+      <p className="text-[#161722] w-3/4 text-center opacity-75 leading-6 mb-14 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -18,12 +18,12 @@ function LoveAndCompasionSection() {
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
       <button
-        className="btn w-40 rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-sm font-normal lg:mb-8"
+        className="btn mb-4 w-40 rounded-xl text-[#1C1D28] bg-[#FFD2A4]  text-sm font-normal lg:mb-8"
         onClick={() => navigate("/about-us")}
       >
         READ MORE
       </button>
-      <div className="flex flex-col md:grid grid-cols-2 md:content-center md:justify-items-center md:self-center items-center space-x-4">
+      <div className="flex  flex-col md:grid grid-cols-2 md:content-center md:justify-items-center md:self-center items-center xl:grid-cols-3 space-x-4">
         <img
           src={ImageOne}
           alt="worshipper"

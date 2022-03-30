@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screen: {
+      "1xl": "1279",
+    },
     extend: {
       spacing: {
         16: "2rem",
