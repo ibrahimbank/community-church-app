@@ -8,10 +8,10 @@ function Events({ subHeading, heading }) {
   // const url = "http://localhost:6000/api/upcomingEvents";
 
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section className="flex  flex-col items-center justify-center">
       <h6 className="text-base font-normal">{subHeading}</h6>
       <h2 className="mb-16">{heading}</h2>
-      <div className="flex space-x-3 justify-items-center items-center">
+      <div className="grid  gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:flex 2xl:space-x-3 justify-items-center items-center">
         {upcomingEvents.map((event) => (
           <div
             key={event.id}

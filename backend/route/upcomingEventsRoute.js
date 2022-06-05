@@ -17,6 +17,6 @@ router.use(function (req, res, next) {
 
 router.get("/", getEvents); //we are setting a post request for the event route here, if a post request is sent this will be the result
 
-// router.get("/:id/event", getEvent); //we are setting a post request for a single events route here, if a post request is sent this will be the result
+router.get("/event/:id", getEvent); //we are setting a post request for a single events route here, if a post request is sent this will be the result
 
 module.exports = router;

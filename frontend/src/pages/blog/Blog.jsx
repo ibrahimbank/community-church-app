@@ -1,15 +1,17 @@
-import { useEffect } from "react";
-import image from "../../images/sermonImg.png";
+import { useEffect } from 'react';
+import image from '../../images/sermonImg.png';
 // import blogData from "./blogData";
-import { getBlogPost, reset } from "../../features/blog/blogPostSlice";
-import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { getBlogPost, reset } from '../../features/blog/blogPostSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 
 function Blog() {
   const dispatch = useDispatch();
 
   const { blog, isLoading, isSuccess } = useSelector((state) => state.blog);
+
+  console.log(blog);
 
   // const navigate = useNavigate();
   const { blogId } = useParams();

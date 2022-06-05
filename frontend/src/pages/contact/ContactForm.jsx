@@ -16,7 +16,7 @@ function ContactForm() {
   const { fullName, email, queryRelated, contactMessage } = formData;
 
   const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.message
+    (state) => state.contact
   );
 
   const dispatch = useDispatch();
@@ -59,6 +59,10 @@ function ContactForm() {
       };
 
       dispatch(createMessage(contactData));
+      fullName = "";
+      email = "";
+      queryRelated = "";
+      contactMessage = "";
     }
   };
 
@@ -67,10 +71,10 @@ function ContactForm() {
   }
 
   return (
-    <section className="flex items-center py-32 px-28 space-x-20">
-      <div className="">
+    <section className="flex flex-col xl:flex-row items-center py-32 md:px-28 space-x-20 w-full">
+      <div className="mb-10 lg:mb-0">
         <h5 className="mb-8 font-bold text-lg">CONTACT FORM:</h5>
-        <form action="" className="flex flex-col w-144 ">
+        <form action="" className="flex flex-col w-full xl:w-144 ">
           <input
             type="text"
             name="fullName"
@@ -87,6 +91,7 @@ function ContactForm() {
             placeholder="Your Email"
             className="form-input mb-3"
             id="email"
+            onChange={handleChange}
           />
           <input
             type="text"
@@ -95,6 +100,7 @@ function ContactForm() {
             placeholder="Query Related"
             className="form-input mb-3"
             id="queryRelated"
+            onChange={handleChange}
           />
           <textarea
             name="contactMessage"
@@ -102,6 +108,7 @@ function ContactForm() {
             placeholder="Message"
             className="form-input-message pt-5"
             id="contactMessage"
+            onChange={handleChange}
           ></textarea>
           <button
             className="btn bg-[#FFD2A4] mt-3 rounded-lg text-sm "
@@ -112,17 +119,17 @@ function ContactForm() {
           </button>
         </form>
       </div>
-      <div className="w-64">
-        <div className="mb-8 w-60">
+      <div className=" w-1/2 md:w-64">
+        <div className="mb-8 w-full md:w-60">
           <p className="opacity-75 text-sm mb-2">Address</p>
           <h5 className="font-bold text-lg">
             NH 234 PUBLIC SQUARE SAN FRANCISCO 65368
           </h5>
         </div>
-        <div className="mb-8 w-60">
+        <div className="mb-8 w-full md:w-60">
           <p className="opacity-75 text-sm mb-2">Contact Details </p>
           <h5 className="font-bold text-lg mb-2">(480) 555-0103</h5>
-          <h5 className="font-bold text-lg">FINSWEET@EXAMPLE.COM</h5>
+          <h5 className="font-bold text-xs sm:text-lg">FINSWEET@EXAMPLE.COM</h5>
         </div>
         <div className="">
           <p className="opacity-75 text-sm mb-2">Find us here</p>

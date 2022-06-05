@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer flex bg-[#161722] py-16 px-24 justify-between text-[#ffff]">
-      <div className="mr-64 ">
+    <footer className="footer flex items-center justify-center flex-col  sm:grid gap-4 lg:grid-cols-2 xl:flex xl:flex-row bg-[#161722] py-16 px-24 xl:justify-between text-[#ffff]">
+      <div className="">
         <img src={Logo} alt="logo" className="mb-4 " />
         <p className="mb-8">© Copyright Finsweet 2022</p>
         <p className="mb-4">(480) 555-0103</p>
@@ -40,19 +40,19 @@ function Footer() {
         </div>
       </div>
       <div className="">
-        <h5 className=" text-base w-96 mb-8">
+        <h5 className=" text-base w-64 sm:w-96 md:w-96 lg:w-96 mb-8">
           SUBSCRIBE TO GET LATEST UPDATES AND NEWS
         </h5>
-        <div className="flex">
+        <div className="flex relative btn sub-input w-60 xl:w-96 rounded-lg  bg-[#161722] border border-solid border-gray-700">
           <input
             type="email"
             name="email"
-            className="btn relative sub-input w-96 rounded-lg px-2  bg-[#161722] border border-solid border-gray-700"
+            className=" bg-[#161722] h-full w-3/4"
             placeholder="Yourmail@gmail.com"
           />
           <Link
             to="contact-us"
-            className="btn bg-[#FFD2A4] w-40 rounded-lg text-[#1C1D28] text-sm absolute text-center justify-center right-24 p-4"
+            className="h-full w-2/5 bg-[#FFD2A4] rounded-lg flex items-center text-[#1C1D28] text-xs text-center justify-center"
           >
             SUBSCRIBE
           </Link>
