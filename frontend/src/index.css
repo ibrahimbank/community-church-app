@@ -14,8 +14,8 @@ body {
   font-family: "DM Sans", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
   color: #161722;
-  width: 100%;
   /* overflow: hidden; */
+  border: 6px solid red;
 }
 
 h1 {
@@ -120,13 +120,6 @@ h2 {
   width: 302px;
 }
 
-.doo {
-  border: 1px solid red;
-}
-
-.goo {
-  border: 1px solid goldenrod;
-}
 footer p,
 footer span,
 footer li {
@@ -150,6 +143,7 @@ footer li {
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
   height: 36rem;
   overflow: hidden;
+  width: 100%;
 }
 
 .quote {
@@ -230,13 +224,24 @@ footer li {
   padding-left: 1rem;
 }
 
-/* @media (max-width: 1330px) {
-  .event {
+@media (max-width: 400px) {
+  .serve-card {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
-  .event-img {
-    display: none;
+  .normal,
+  .reverse {
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid red;
   }
-} */
+
+  .normal .benfit-para,
+  .reverse .benfit-para {
+    width: 100%;
+  }
+}
