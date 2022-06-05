@@ -10,7 +10,7 @@ function OurTeam() {
         {Teams.map((data) => (
           <div
             key={data.id}
-            className="flex flex-col items-center justify-center bg-[#F5F2F0] w-72 h-80"
+            className="flex flex-col items-center justify-center mt-5 bg-[#F5F2F0] w-72 h-80"
           >
             <div className="">
               <img src={data.image} alt="members" className="" />

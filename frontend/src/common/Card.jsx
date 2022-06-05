@@ -2,7 +2,7 @@ import CardData from "./cardData";
 
 function Card() {
   return (
-    <div className="flex w-full flex-col flex-wrap xl:space-x-4 xl:flex-row lg:grid grid-cols-2 gap-2 xl:grid-cols-3 justify-items-center content-center">
+    <div className="flex w-4/5 xl:w-4/5 flex-col flex-wrap xl:space-x-4 xl:flex-row lg:grid grid-cols-2 gap-2 xl:grid-cols-3 justify-items-center content-center">
       {CardData.map((card) => (
         <div
           key={card.id}
