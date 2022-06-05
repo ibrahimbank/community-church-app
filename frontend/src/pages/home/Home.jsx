@@ -6,6 +6,7 @@ import JoinUs from "../../common/JoinUs";
 import Events from "../../common/Events";
 import Serve from "./Serve";
 // import { Reveal } from "react-reveal";
+// home
 
 function Home() {
   return (
