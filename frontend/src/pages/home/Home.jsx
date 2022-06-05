@@ -9,7 +9,7 @@ import Serve from "./Serve";
 
 function Home() {
   return (
-    <div className="pb-32 sm:w-full goo">
+    <div className="pb-32 sm:w-full">
       <Header />
       {/* <Reveal> */}
       <WhatWeDo />

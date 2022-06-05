@@ -15,7 +15,6 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   color: #161722;
   /* overflow: hidden; */
-  border: 6px solid red;
 }
 
 h1 {
@@ -248,11 +247,11 @@ footer li {
 
   .reverse .img-wrapper {
     order: 1;
-    margin-right: 1.5rem;
+    margin-right: 0rem;
   }
 
   .normal .img-wrapper {
     order: 1;
-    margin-left: 1.5rem;
+    margin-left: 0rem;
   }
 }
