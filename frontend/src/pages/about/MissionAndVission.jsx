@@ -3,15 +3,15 @@ import React from "react";
 function MissionAndVission() {
   return (
     <section
-      className="flex  space-x-3 items-center justify-center w-full mt-32 mb-24"
+      className="flex flex-wrap space-x-3 items-center justify-center w-full mt-32 mb-24"
       id="mission"
     >
-      <div className="about-mission flex flex-col">
+      <div className="about-mission flex flex-col items-center">
         <h6 className="text-base mb-4">OUR MISSION AND VISSION</h6>
-        <h4 className="mb-4 font-bold text-lg w-80">
+        <h4 className="mb-4 font-bold text-center sm:text-justify text-sm sm:text-lg sm:w-80">
           STRIVING FOR A BETTER TOMORROW
         </h4>
-        <p className="opacity-75">
+        <p className="opacity-75 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -20,9 +20,11 @@ function MissionAndVission() {
         </p>
       </div>
 
-      <div className="about-mission flex flex-col">
-        <h6 className="text-base mb-4">WHAT WE DO</h6>
-        <h4 className="mb-4 font-bold text-lg w-80">
+      <div className="about-mission flex flex-col mt-14 sm:mt-0">
+        <h6 className="text-base mb-4 text-center sm:text-justify">
+          WHAT WE DO
+        </h6>
+        <h4 className="mb-4 font-bold text-sm sm:text-lg sm:w-80 text-center sm:text-justify">
           BRINGING PEACE AND JOY TO THE WORLD
         </h4>
         <p className="opacity-75">

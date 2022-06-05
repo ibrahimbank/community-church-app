@@ -7,7 +7,7 @@ function LoveAndCompasionSection() {
   const navigate = useNavigate();
   return (
     <section className="flex  flex-col items-center justify-items-center mt-16 pt-16">
-      <h2 className=" font-bold mb-12 leading-10 text-[#161722]">
+      <h2 className=" text-base sm:text-lg font-bold mb-12 leading-10 text-[#161722]">
         LOVE AND COMPASSION
       </h2>
       <p className="text-[#161722] w-3/4 text-center opacity-75 leading-6 mb-14 ">

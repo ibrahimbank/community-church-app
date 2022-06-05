@@ -9,7 +9,7 @@ function AboutBenefits() {
       </h2>
       {Benefit.map((data) => (
         <div key={data.id} className={data.class}>
-          <div className="cool w-1/2 flex flex-col">
+          <div className="cool w-full sm:w-1/2 flex flex-col">
             <h4 className="font-bold text-lg mb-4">{data.heading}</h4>
             <p className="benfit-para opacity-75 ">{data.detail}</p>
           </div>

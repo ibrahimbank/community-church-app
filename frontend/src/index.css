@@ -235,13 +235,24 @@ footer li {
   .normal,
   .reverse {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
-    border: 1px solid red;
   }
 
   .normal .benfit-para,
   .reverse .benfit-para {
     width: 100%;
+  }
+
+  .reverse .img-wrapper {
+    order: 1;
+    margin-right: 1.5rem;
+  }
+
+  .normal .img-wrapper {
+    order: 1;
+    margin-left: 1.5rem;
   }
 }
